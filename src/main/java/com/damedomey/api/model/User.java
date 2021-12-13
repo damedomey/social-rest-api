@@ -1,7 +1,10 @@
 package com.damedomey.api.model;
 
+import org.bson.types.ObjectId;
+
 public class User {
-    private int id;
+    private ObjectId objectId;
+    private String id;
     private String username;
     private String email;
     private String login;
@@ -11,24 +14,27 @@ public class User {
     private String[] followers;
     private String[] followings;
     private Boolean isAdmin;
-    private Boolean desc;
-    private Boolean city;
-    private Boolean from;
-    private int relationship;
+    private String desc;
+    private String city;
+    private String from;
 
     public User() {
     }
 
-    public User(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public ObjectId getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(ObjectId objectId) {
+        this.objectId = objectId;
     }
 
     public String getUsername() {
@@ -103,35 +109,27 @@ public class User {
         isAdmin = admin;
     }
 
-    public Boolean getDesc() {
+    public String getDesc() {
         return desc;
     }
 
-    public void setDesc(Boolean desc) {
+    public void setDesc(String desc) {
         this.desc = desc;
     }
 
-    public Boolean getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(Boolean city) {
+    public void setCity(String city) {
         this.city = city;
     }
 
-    public Boolean getFrom() {
+    public String getFrom() {
         return from;
     }
 
-    public void setFrom(Boolean from) {
+    public void setFrom(String from) {
         this.from = from;
-    }
-
-    public int getRelationship() {
-        return relationship;
-    }
-
-    public void setRelationship(int relationship) {
-        this.relationship = relationship;
     }
 }
